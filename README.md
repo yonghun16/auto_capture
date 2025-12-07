@@ -20,26 +20,18 @@ brew install ghostscript
 
 
 ### 2️⃣ macOS 접근 권한 설정
-
-자동 캡처, 자동 입력을 위해 다음 앱에 권한을 줘야 해:
-
-시스템 설정 → 개인정보 보호 및 보안 → 접근성
-
-- Terminal 또는 iTerm2 추가
-- magick 필요하면 추가
-
-시스템 설정 → 개인정보 보호 및 보안 → 화면 기록
-
-- 터미널 추가
-
-시스템 설정 → 자동화
-
-- Terminal → System Events 허용
+1. 자동 캡처, 자동 입력을 위해 다음 앱에 권한필요:
+`시스템 설정 → 개인정보 보호 및 보안 → 접근성`
+2. Terminal 또는 iTerm2 추가
+3. magick 필요하면 추가
+`시스템 설정 → 개인정보 보호 및 보안 → 화면 기록`
+4. 터미널 추가
+`시스템 설정 → 자동화`
+`Terminal → System Events 허용`
 
 
 
 ## 📌 스크립트 사용법
-
 ### 1️⃣ 파일로 저장
 
 예: Desktop 에 저장
@@ -53,9 +45,8 @@ chmod +x ~/Desktop/ebook_capture.sh
 
 
 ### 2️⃣ ebook 화면 띄우기
-	•	전체 화면으로 하는 게 좋아.
-	•	페이지가 1페이지에서 시작해야 함.
-	•	스크립트에서 정한 REGION="000,70,950,1200" 값이 화면 캡처 영역인데, 필요하면 조정.
+- 페이지가 1페이지에서 시작해야 함.
+- 스크립트에서 정한 REGION="000,70,950,1200" 값이 화면 캡처 영역인데, 필요하면 조정.
 
 ### 3️⃣ 실행
 ```bash
@@ -69,25 +60,19 @@ chmod +x ~/Desktop/ebook_capture.sh
 
 
 ### 📁 결과물
-
-스크립트가 다음 파일들을 만듦:
-
-파일	의미
-snap_0001.png …	원본 캡처 이미지들
-jpg_tmp/*.jpg	변환된 JPG 이미지
-ebook_raw.pdf	변환만 된 PDF
-ebook_compressed.pdf	최종 압축된 PDF
+- snap_0001.png …	원본 캡처 이미지들
+- jpg_tmp/*.jpg	변환된 JPG 이미지
+- ebook_raw.pdf	변환만 된 PDF
+- ebook_compressed.pdf	최종 압축된 PDF
 
 
-### 옵션 변경 방법
-
-옵션	위치	설명
-REGION="000,70,950,1200"	상단 부분	캡처 영역 좌표 (x,y,width,height)
-TOTAL_PAGES=558	스크립트 상단	캡처할 페이지 수
-INTERVAL=0.8	스크립트 상단	페이지 넘기기 속도 (기기가 느리면 1.2로 증가)
-JPG_QUALITY=50	PNG→JPG 변환단계	숫자 낮을수록 용량↓ 화질↓
+### 🎚️ 옵션 변경 방법
+- REGION="000,70,950,1200"	상단 부분	캡처 영역 좌표 (x,y,width,height)
+- TOTAL_PAGES=558	스크립트 상단	캡처할 페이지 수
+- I-NTERVAL=0.8	스크립트 상단	페이지 넘기기 속도 (기기가 느리면 1.2로 증가)
+- JPG_QUALITY=50	PNG→JPG 변환단계	숫자 낮을수록 용량↓ 화질↓
 
 ### ⭐️ 추천 값
-	•	INTERVAL=1.0
-	•	JPG_QUALITY=60
-	•	TOTAL_PAGES 정확히 입력
+- INTERVAL=1.0
+- JPG_QUALITY=60
+- TOTAL_PAGES 정확히 입력
