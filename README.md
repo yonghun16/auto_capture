@@ -36,11 +36,11 @@ brew install ghostscript
 
 예: Desktop 에 저장
 ```bash
-vi ~/Desktop/ebook_capture.sh
+vi ~/Desktop/auto_capture.sh
 ```
 스크립트 내용 그대로 붙여넣고 저장.
 ```bash
-chmod +x ~/Desktop/ebook_capture.sh
+chmod +x ~/Desktop/auto_capture.sh
 ```
 
 
